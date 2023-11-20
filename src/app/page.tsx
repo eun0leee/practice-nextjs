@@ -17,7 +17,7 @@ export default async function Home({ params }: PramsProps) {
           <Link href="/detail/seoul?name=서울">서울</Link>
         </li>
         <li>
-          <Link href="/detail/newyork?name=뉴욕">뉴욕</Link>
+          <Link href="/detail/NYC?name=뉴욕">뉴욕</Link>
         </li>
         <li>
           <Link href="/detail/london?name=런던">런던</Link>
