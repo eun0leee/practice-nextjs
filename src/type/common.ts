@@ -1,4 +1,4 @@
-export interface PramsProps {
+export interface ParamsProps {
   params: {
     location: string;
   };

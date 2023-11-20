@@ -1,12 +1,13 @@
 import RevalidateButton from '@/components/RevalidateButton';
-import { PramsProps } from '@/type/common';
+import { ParamsProps } from '@/type/common';
+import { TimeProps } from '@/type/time';
 import { getCurrentWeather } from '@/utils/getCurrentWeather';
 import { getTime } from '@/utils/getTime';
 import Link from 'next/link';
 
-export default async function Home({ params }: PramsProps) {
+export default async function Home() {
   const res = await getCurrentWeather('seoul');
-  const time = await getTime(res.location.tz_id);
+  const time: TimeProps = await getTime(res.location.tz_id);
 
   return (
     <main>
