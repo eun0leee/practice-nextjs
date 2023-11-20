@@ -2,6 +2,13 @@ import HomeButton from '@/components/HomeButton';
 import { PramsProps } from '@/type/common';
 import { getForeCast } from '@/utils/getForecast';
 
+export function generateMetadata({ params }: PramsProps) {
+  return {
+    title: `날씨앱 - ${params.location}`,
+    description: `${params.location}의 3일간 날씨 예보를 알려드립니다.`,
+  };
+}
+
 export default async function Detail({ params }: PramsProps) {
   const res = await getForeCast(params.location);
 
